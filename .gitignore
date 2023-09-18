@@ -1,0 +1,15 @@
+build/
+.dart_tool/
+.flutter-plugins/
+.flutter-plugins-dependencies
+.packages
+.pub/
+.idea/
+.vscode/
+ios/build/
+android/build/
+
+# Ignore sensitive data
+api_keys.json
+
+# Ignore any other files or folders that you want to ignore
