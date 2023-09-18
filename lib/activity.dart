@@ -69,7 +69,7 @@ class _ActivityState extends State<Activity> {
       if (_secondsRemaining <= 0 && activityName == ActivityStep.petition) {
         activityTitle = "Seven Minutes With The Lord";
         activityName = ActivityStep.ending;
-        activityDescription = petitionDescription;
+        activityDescription = endingDescription;
         _timer?.cancel();
         return;
       }
@@ -98,7 +98,11 @@ class _ActivityState extends State<Activity> {
             children: [
               Container(
                   margin: const EdgeInsets.all(40.0),
-                  child: Text(activityDescription)),
+                  alignment: Alignment.center,
+                  child: Text(
+                    activityDescription,
+                    textAlign: TextAlign.center,
+                  )),
               Text(
                   "${(_secondsRemaining ~/ 60).toString().padLeft(2, '0')} : ${(_secondsRemaining % 60).toString().padLeft(2, '0')}",
                   style: Theme.of(context).textTheme.bodyLarge),
