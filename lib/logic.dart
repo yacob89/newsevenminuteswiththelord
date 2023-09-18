@@ -10,20 +10,29 @@ class CounterLogic {
   }
 }
 
-enum Step {
+enum ActivityStep {
   calling,
   praying,
   prayreading,
   confession,
   consecration,
   thanksgiving,
-  petition
+  petition,
+  ending
 }
 
-int defaultCallingTime = DateTime.now().millisecondsSinceEpoch + 1000 * 30;
-int defaultPrayingTime = DateTime.now().millisecondsSinceEpoch + 1000 * 60;
-int defaultPrayReadingTime = DateTime.now().millisecondsSinceEpoch + 1000 * 150;
-int defaultConfessionTime = DateTime.now().millisecondsSinceEpoch + 1000 * 60;
-int defaultConsecrationTime = DateTime.now().millisecondsSinceEpoch + 1000 * 30;
-int defaultThanksgivingTime = DateTime.now().millisecondsSinceEpoch + 1000 * 30;
-int defaultPetitionTime = DateTime.now().millisecondsSinceEpoch + 1000 * 60;
+int defaultCallingTime = 30;
+int defaultPrayingTime = 60;
+int defaultPrayReadingTime = 150;
+int defaultConfessionTime = 60;
+int defaultConsecrationTime = 30;
+int defaultThanksgivingTime = 30;
+int defaultPetitionTime = 60;
+
+String callingName = "Calling";
+String prayingName = "Praying";
+String prayReadingName = "Pray Reading";
+String confessionName = "Confession";
+String consecrationName = "Consecration";
+String thanksgivingName = "Thanksgiving";
+String petitionName = "Petition";
