@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'my_home_page.dart';
 
+final ThemeData customTheme = ThemeData(
+  colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+  useMaterial3: true,
+);
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,10 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Seven Minutes With The Lord',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: customTheme,
       home: const MyHomePage(title: 'Seven Minutes With The Lord'),
     );
   }
