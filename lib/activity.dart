@@ -14,6 +14,7 @@ class _ActivityState extends State<Activity> {
   int _secondsRemaining = defaultCallingTime;
   var activityName = ActivityStep.calling;
   String activityTitle = callingName;
+  String activityDescription = callingDescription;
 
   @override
   void initState() {
@@ -27,42 +28,49 @@ class _ActivityState extends State<Activity> {
         _secondsRemaining = defaultPrayingTime;
         activityTitle = prayingName;
         activityName = ActivityStep.praying;
+        activityDescription = prayingDescription;
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.praying) {
         _secondsRemaining = defaultPrayReadingTime;
         activityTitle = prayReadingName;
         activityName = ActivityStep.prayreading;
+        activityDescription = prayReadingDescription;
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.prayreading) {
         _secondsRemaining = defaultConfessionTime;
         activityTitle = confessionName;
         activityName = ActivityStep.confession;
+        activityDescription = confessionDescription;
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.confession) {
         _secondsRemaining = defaultConsecrationTime;
         activityTitle = consecrationName;
         activityName = ActivityStep.consecration;
+        activityDescription = consecrationDescription;
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.consecration) {
         _secondsRemaining = defaultThanksgivingTime;
         activityTitle = thanksgivingName;
         activityName = ActivityStep.thanksgiving;
+        activityDescription = thanksgivingDescription;
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.thanksgiving) {
         _secondsRemaining = defaultPetitionTime;
         activityTitle = petitionName;
         activityName = ActivityStep.petition;
+        activityDescription = petitionDescription;
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.petition) {
-        _timer?.cancel();
         activityTitle = "Seven Minutes With The Lord";
         activityName = ActivityStep.ending;
+        activityDescription = petitionDescription;
+        _timer?.cancel();
         return;
       }
 
@@ -88,8 +96,12 @@ class _ActivityState extends State<Activity> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("${_secondsRemaining ~/ 60} : ${_secondsRemaining % 60}",
-                  style: Theme.of(context).textTheme.titleLarge),
+              Container(
+                  margin: const EdgeInsets.all(40.0),
+                  child: Text(activityDescription)),
+              Text(
+                  "${(_secondsRemaining ~/ 60).toString().padLeft(2, '0')} : ${(_secondsRemaining % 60).toString().padLeft(2, '0')}",
+                  style: Theme.of(context).textTheme.bodyLarge),
               TextButton(
                 onPressed: () {
                   // Pop the current route from the navigator stack.
