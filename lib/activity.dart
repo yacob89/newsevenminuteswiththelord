@@ -24,6 +24,12 @@ class _ActivityState extends State<Activity> {
     _startTimer();
   }
 
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
   void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (_secondsRemaining <= 0 && activityName == ActivityStep.calling) {
@@ -102,10 +108,112 @@ class _ActivityState extends State<Activity> {
     });
   }
 
-  @override
-  void dispose() {
-    _timer?.cancel();
-    super.dispose();
+  void rewindActivity() {
+    switch (activityName) {
+      case ActivityStep.praying:
+        setState(() {
+          _secondsRemaining = defaultCallingTime;
+          activityTitle = callingName;
+          activityName = ActivityStep.calling;
+          activityDescription = callingDescription;
+        });
+        break;
+      case ActivityStep.prayreading:
+        setState(() {
+          _secondsRemaining = defaultPrayingTime;
+          activityTitle = prayingName;
+          activityName = ActivityStep.praying;
+          activityDescription = prayingDescription;
+        });
+        break;
+      case ActivityStep.confession:
+        setState(() {
+          _secondsRemaining = defaultPrayReadingTime;
+          activityTitle = prayReadingName;
+          activityName = ActivityStep.prayreading;
+          activityDescription = prayReadingDescription;
+        });
+        break;
+      case ActivityStep.consecration:
+        setState(() {
+          _secondsRemaining = defaultConfessionTime;
+          activityTitle = confessionName;
+          activityName = ActivityStep.confession;
+          activityDescription = confessionDescription;
+        });
+        break;
+      case ActivityStep.thanksgiving:
+        setState(() {
+          _secondsRemaining = defaultConsecrationTime;
+          activityTitle = consecrationName;
+          activityName = ActivityStep.consecration;
+          activityDescription = consecrationDescription;
+        });
+        break;
+      case ActivityStep.petition:
+        setState(() {
+          _secondsRemaining = defaultThanksgivingTime;
+          activityTitle = thanksgivingName;
+          activityName = ActivityStep.thanksgiving;
+          activityDescription = thanksgivingDescription;
+        });
+        break;
+      default:
+    }
+  }
+
+  void forwardActivity() {
+    switch (activityName) {
+      case ActivityStep.calling:
+        setState(() {
+          _secondsRemaining = defaultPrayingTime;
+          activityTitle = prayingName;
+          activityName = ActivityStep.praying;
+          activityDescription = prayingDescription;
+        });
+        break;
+      case ActivityStep.praying:
+        setState(() {
+          _secondsRemaining = defaultPrayReadingTime;
+          activityTitle = prayReadingName;
+          activityName = ActivityStep.prayreading;
+          activityDescription = prayReadingDescription;
+        });
+        break;
+      case ActivityStep.prayreading:
+        setState(() {
+          _secondsRemaining = defaultConfessionTime;
+          activityTitle = confessionName;
+          activityName = ActivityStep.confession;
+          activityDescription = confessionDescription;
+        });
+        break;
+      case ActivityStep.confession:
+        setState(() {
+          _secondsRemaining = defaultConsecrationTime;
+          activityTitle = consecrationName;
+          activityName = ActivityStep.consecration;
+          activityDescription = consecrationDescription;
+        });
+        break;
+      case ActivityStep.consecration:
+        setState(() {
+          _secondsRemaining = defaultThanksgivingTime;
+          activityTitle = thanksgivingName;
+          activityName = ActivityStep.thanksgiving;
+          activityDescription = thanksgivingDescription;
+        });
+        break;
+      case ActivityStep.thanksgiving:
+        setState(() {
+          _secondsRemaining = defaultPetitionTime;
+          activityTitle = petitionName;
+          activityName = ActivityStep.petition;
+          activityDescription = petitionDescription;
+        });
+        break;
+      default:
+    }
   }
 
   @override
@@ -135,7 +243,9 @@ class _ActivityState extends State<Activity> {
                   IconButton.filled(
                     isSelected: false,
                     icon: const Icon(Icons.fast_rewind_outlined),
-                    onPressed: () {},
+                    onPressed: () {
+                      rewindActivity();
+                    },
                   ),
                   const SizedBox(width: 10),
                   IconButton.filled(
@@ -161,7 +271,9 @@ class _ActivityState extends State<Activity> {
                   IconButton.filled(
                     isSelected: false,
                     icon: const Icon(Icons.fast_forward_outlined),
-                    onPressed: () {},
+                    onPressed: () {
+                      forwardActivity();
+                    },
                   ),
                 ],
               ),
