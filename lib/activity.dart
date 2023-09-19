@@ -15,6 +15,8 @@ class _ActivityState extends State<Activity> {
   var activityName = ActivityStep.calling;
   String activityTitle = callingName;
   String activityDescription = callingDescription;
+  bool filledSelected = false;
+  bool timerPaused = false;
 
   @override
   void initState() {
@@ -67,15 +69,22 @@ class _ActivityState extends State<Activity> {
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.petition) {
-        activityTitle = "Seven Minutes With The Lord";
+        _secondsRemaining = defaultEndingTime;
+        activityTitle = endingName;
         activityName = ActivityStep.ending;
         activityDescription = endingDescription;
+        return;
+      }
+      if (_secondsRemaining <= 0 && activityName == ActivityStep.ending) {
         _timer?.cancel();
         return;
       }
-
-      _secondsRemaining--;
-      setState(() {});
+      if (!timerPaused) {
+        setState(() {
+          _secondsRemaining--;
+        });
+      }
+      //setState(() {});
     });
   }
 
@@ -106,6 +115,42 @@ class _ActivityState extends State<Activity> {
               Text(
                   "${(_secondsRemaining ~/ 60).toString().padLeft(2, '0')} : ${(_secondsRemaining % 60).toString().padLeft(2, '0')}",
                   style: Theme.of(context).textTheme.bodyLarge),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  IconButton.filled(
+                    isSelected: false,
+                    icon: const Icon(Icons.fast_rewind_outlined),
+                    onPressed: () {},
+                  ),
+                  const SizedBox(width: 10),
+                  IconButton.filled(
+                    isSelected: filledSelected,
+                    icon: const Icon(Icons.pause_outlined),
+                    selectedIcon: const Icon(Icons.play_arrow_outlined),
+                    onPressed: () {
+                      setState(() {
+                        filledSelected = !filledSelected;
+                      });
+                      if (!timerPaused) {
+                        setState(() {
+                          timerPaused = true;
+                        });
+                      } else {
+                        setState(() {
+                          timerPaused = false;
+                        });
+                      }
+                    },
+                  ),
+                  const SizedBox(width: 10),
+                  IconButton.filled(
+                    isSelected: false,
+                    icon: const Icon(Icons.fast_forward_outlined),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
               TextButton(
                 onPressed: () {
                   // Pop the current route from the navigator stack.

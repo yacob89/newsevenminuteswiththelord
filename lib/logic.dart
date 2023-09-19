@@ -22,12 +22,13 @@ enum ActivityStep {
 }
 
 int defaultCallingTime = 5; //30;
-int defaultPrayingTime = 5; //60;
-int defaultPrayReadingTime = 5; //150;
-int defaultConfessionTime = 5; //60;
-int defaultConsecrationTime = 5; //30;
-int defaultThanksgivingTime = 5; //30;
-int defaultPetitionTime = 5; //60;
+int defaultPrayingTime = 6; //60;
+int defaultPrayReadingTime = 6; //150;
+int defaultConfessionTime = 6; //60;
+int defaultConsecrationTime = 6; //30;
+int defaultThanksgivingTime = 6; //30;
+int defaultPetitionTime = 6; //60;
+int defaultEndingTime = 6; //60;
 
 String callingName = "Calling";
 String prayingName = "Praying";
@@ -36,6 +37,7 @@ String confessionName = "Confession";
 String consecrationName = "Consecration";
 String thanksgivingName = "Thanksgiving";
 String petitionName = "Petition";
+String endingName = "Seven Minutes With The Lord";
 
 String callingDescription =
     "Calling on the Name of the Lord to set our mind on the spirit – 1 Cor.12:3; Rom. 8:6; 10:12-13";
