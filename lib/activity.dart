@@ -27,52 +27,66 @@ class _ActivityState extends State<Activity> {
   void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (_secondsRemaining <= 0 && activityName == ActivityStep.calling) {
-        _secondsRemaining = defaultPrayingTime;
-        activityTitle = prayingName;
-        activityName = ActivityStep.praying;
-        activityDescription = prayingDescription;
+        setState(() {
+          _secondsRemaining = defaultPrayingTime;
+          activityTitle = prayingName;
+          activityName = ActivityStep.praying;
+          activityDescription = prayingDescription;
+        });
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.praying) {
-        _secondsRemaining = defaultPrayReadingTime;
-        activityTitle = prayReadingName;
-        activityName = ActivityStep.prayreading;
-        activityDescription = prayReadingDescription;
+        setState(() {
+          _secondsRemaining = defaultPrayReadingTime;
+          activityTitle = prayReadingName;
+          activityName = ActivityStep.prayreading;
+          activityDescription = prayReadingDescription;
+        });
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.prayreading) {
-        _secondsRemaining = defaultConfessionTime;
-        activityTitle = confessionName;
-        activityName = ActivityStep.confession;
-        activityDescription = confessionDescription;
+        setState(() {
+          _secondsRemaining = defaultConfessionTime;
+          activityTitle = confessionName;
+          activityName = ActivityStep.confession;
+          activityDescription = confessionDescription;
+        });
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.confession) {
-        _secondsRemaining = defaultConsecrationTime;
-        activityTitle = consecrationName;
-        activityName = ActivityStep.consecration;
-        activityDescription = consecrationDescription;
+        setState(() {
+          _secondsRemaining = defaultConsecrationTime;
+          activityTitle = consecrationName;
+          activityName = ActivityStep.consecration;
+          activityDescription = consecrationDescription;
+        });
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.consecration) {
-        _secondsRemaining = defaultThanksgivingTime;
-        activityTitle = thanksgivingName;
-        activityName = ActivityStep.thanksgiving;
-        activityDescription = thanksgivingDescription;
+        setState(() {
+          _secondsRemaining = defaultThanksgivingTime;
+          activityTitle = thanksgivingName;
+          activityName = ActivityStep.thanksgiving;
+          activityDescription = thanksgivingDescription;
+        });
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.thanksgiving) {
-        _secondsRemaining = defaultPetitionTime;
-        activityTitle = petitionName;
-        activityName = ActivityStep.petition;
-        activityDescription = petitionDescription;
+        setState(() {
+          _secondsRemaining = defaultPetitionTime;
+          activityTitle = petitionName;
+          activityName = ActivityStep.petition;
+          activityDescription = petitionDescription;
+        });
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.petition) {
-        _secondsRemaining = defaultEndingTime;
-        activityTitle = endingName;
-        activityName = ActivityStep.ending;
-        activityDescription = endingDescription;
+        setState(() {
+          _secondsRemaining = defaultEndingTime;
+          activityTitle = endingName;
+          activityName = ActivityStep.ending;
+          activityDescription = endingDescription;
+        });
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.ending) {
