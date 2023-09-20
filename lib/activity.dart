@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'dart:async';
 import "logic.dart";
 
@@ -17,6 +18,7 @@ class _ActivityState extends State<Activity> {
   String activityDescription = callingDescription;
   bool filledSelected = false;
   bool timerPaused = false;
+  final audioPlayer = AudioPlayer();
 
   @override
   void initState() {
@@ -32,6 +34,10 @@ class _ActivityState extends State<Activity> {
 
   void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_secondsRemaining <= 0) {
+        audioPlayer
+            .play(AssetSource('sounds/mixkit-alert-quick-chime-766.wav'));
+      }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.calling) {
         setState(() {
           _secondsRemaining = defaultPrayingTime;
@@ -104,7 +110,6 @@ class _ActivityState extends State<Activity> {
           _secondsRemaining--;
         });
       }
-      //setState(() {});
     });
   }
 
