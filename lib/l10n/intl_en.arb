@@ -1,0 +1,4 @@
+{
+  "start": "Start!",
+  "welcomeMessage": "Welcome, {name}!"
+}

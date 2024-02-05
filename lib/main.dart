@@ -3,6 +3,8 @@ import 'my_home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart'; // Import generated localization class
 
 final ThemeData customTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -16,9 +18,7 @@ final ThemeData customTheme = ThemeData(
     //           to "lato", "poppins", or "lora".
     //           The title uses "titleLarge"
     //           and the middle text uses "bodyMedium".
-    bodyLarge: GoogleFonts.roboto(
-      fontSize: 30,
-    ),
+    bodyLarge: GoogleFonts.roboto(fontSize: 30, color: Colors.deepPurple),
     bodyMedium: GoogleFonts.roboto(fontSize: 14),
     displaySmall: GoogleFonts.roboto(),
   ),
@@ -99,6 +99,13 @@ class MyApp extends StatelessWidget {
       title: 'Seven Minutes With The Lord',
       theme: customTheme,
       home: const MyHomePage(title: 'Seven Minutes With The Lord'),
+      localizationsDelegates: const [
+        S.delegate, // Add the generated delegate
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }
