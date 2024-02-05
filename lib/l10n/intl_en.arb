@@ -1,4 +1,21 @@
 {
   "start": "Start!",
-  "welcomeMessage": "Welcome, {name}!"
+  "appName": "7 Minutes With The Lord",
+  "configuration": "Config",
+  "exit": "Exit",
+  "calling": "Berseru kepada nama Tuhan",
+  "callingDesc": "Berseru kepada nama Tuhan untuk mengarahkan pikiran kita pada roh &#8211; 1 Korintus 12:3; Roma 8:6; 10:12&#8211;13",
+  "praying": "Berdoa",
+  "prayingDesc": "Membuka hati kita, melembutkan hati kita, dan mengosongkan diri kita. Memberitahu Dia bahwa kita mengasihi Dia &#8211; 2 Korintus 3:16; Mazmur 62:8",
+  "prayReading": "Doa Baca",
+  "prayReadingDesc": "Memakai roh kita mendoakan 1&#8211;2 ayat. Mengubah ayat&#8211;ayat itu menjadi doa pribadi kita &#8211; Efesus 6:17&#8211;18; 2 Timotius 3:16",
+  "confession": "Mengaku Dosa",
+  "confessionDesc": "Mengakui dosa&#8211;dosa dan pelanggaran&#8211;pelanggaran yang ada pada hati nurani kita dan menyingkirkan semua penghalang persekutuan. Memohon pengampunan dan pembasuhan &#8211; 1 Yohanes 1:7, 9; Mazmur 66:18; Yesaya 59:1&#8211;2",
+  "consecration": "Konsikrasi",
+  "consecrationDesc": "Mempersembahkan diri kita kepada Tuhan dengan segar, memberi Dia landasan di dalam seluruh diri kita &#8211; Roma 12:1&#8211;2; 6:13,19; Markus 12:30",
+  "thanksgiving": "Mengucap Syukur",
+  "thanksgivingDesc": "Mengucap syukur untuk segala sesuatu; untuk semua orang, semua situasi, dan semua hal di dalam hidup Anda dan memuji Dia &#8211; Efesus 5:20; 1 Tesalonika 5:18",
+  "petition": "Doa Permohonan",
+  "petitionDesc": "Memohon kepada Tuhan untuk semua kebutuhan kita, pertumbuhan kita, dan orang&#8211;orang yang memerlukan keselamatan &#8211; 1 Timotius 2:1: Efesus 6:18; Matius 7:7; Mazmur 143:8",
+  "endMessage": "Lanjutkan untuk mengontak Tuhan dari waktu ke waktu"
 }
