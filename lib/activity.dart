@@ -4,6 +4,7 @@ import 'dart:async';
 import "logic.dart";
 import "main.dart";
 import 'generated/l10n.dart'; // Import generated localization class
+import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 
 class Activity extends StatefulWidget {
   const Activity({super.key});
@@ -36,6 +37,7 @@ class _ActivityState extends State<Activity> {
 
   void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      FlutterOverlayWindow.shareData("$_secondsRemaining^$activityName");
       if (_secondsRemaining <= 0) {
         audioPlayer
             .play(AssetSource('sounds/mixkit-alert-quick-chime-766.wav'));

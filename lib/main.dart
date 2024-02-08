@@ -5,6 +5,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart'; // Import generated localization class
+import "overlay.dart";
 
 BuildContext? buildContext;
 
@@ -33,6 +34,13 @@ void main() {
   runApp(const MyApp());
   requestNotificationPermission();
   initializeNotifications();
+}
+
+// overlay entry point
+@pragma("vm:entry-point")
+void overlayMain() {
+  runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false, home: TextFieldOverlay()));
 }
 
 void initializeNotifications() async {
