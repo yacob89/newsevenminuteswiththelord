@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'activity.dart';
 import 'generated/l10n.dart'; // Import generated files
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -11,7 +12,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _selectedLanguageCode = 'en'; // Default language
+  String? _selectedLanguageCode = "en"; // Default language
+
+  @override
+  void initState() {
+    super.initState();
+    loadLanguagePreference();
+  }
 
   final Map<String, String> _languages = {
     'en': 'English',
@@ -36,9 +43,27 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  Future<void> saveLanguagePreference(String languageCode) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('language_code', languageCode);
+  }
+
+  Future<void> loadLanguagePreference() async {
+    final prefs = await SharedPreferences.getInstance();
+    String? languageCode = prefs.getString('language_code') ??
+        "en"; // Default to English if not set
+    // Since we're inside an async method, use `setState` to update the UI
+    setState(() {
+      _selectedLanguageCode = languageCode;
+    });
+    // If you want to apply the loaded locale immediately, you might need to do it here as well
+    _changeLanguage(languageCode);
+  }
+
   @override
   Widget build(BuildContext context) {
     final localizations = S.of(context); // Get localization instance
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
@@ -61,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onChanged: (String? newValue) {
                   _changeLanguage(newValue!);
+                  saveLanguagePreference(newValue);
                 },
                 items:
                     _languages.entries.map<DropdownMenuItem<String>>((entry) {
