@@ -3,19 +3,22 @@
   "appName": "7 Minutes With The Lord",
   "configuration": "Config",
   "exit": "Exit",
-  "calling": "Tumatawag sa Pangalan ng Panginoon",
-  "callingDesc": "Tumatawag sa Pangalan ng Panginoon upang ilagak ang ating isip sa espiritu &#8211; 1Cor 12:3; Roma 8:6; 10:12&#8211;13",
-  "praying": "Nananalangin",
-  "prayingDesc": "Binubuksan ang ating puso, pinalalambot ang ating puso at binabasyo ang ating sarili.  Sinasabi sa Kanya na iniibig natin Siya &#8211; 2Cor 3:16; Awit 62:8",
-  "prayReading": "Pagbabasa-dalangin",
-  "prayReadingDesc": "Ginagamit ang ating naensayong espiritu upang manalangin hinggil sa isa o dalawang bersikulo. Ginagawang personal na panalangin ang mga bersikulo &#8211; Efe 6:17&#8211;18; 2Tm. 3:16",
-  "confession": "Nagpapahayag ng mga Kasalanan",
-  "confessionDesc": "Ipinapahayag ang mga kasalanan at mga pagsalangsang sa ating budhi at inaalis ang lahat ng hadlang sa salamuha. Humihingi ng kapatawaran at paglilinis &#8211; 1Juan 1:7, 9; Awit 66:18; Isa 59:1&#8211;2",
-  "consecration": "Pag-aalay",
-  "consecrationDesc": "Muling inihahandog ang ating sarili sa Panginoon, ibinibigay sa Kanya ang buong puwang sa loob natin &#8211; Roma 12:1&#8211;2; 6:13,19; Marcos 12:30",
-  "thanksgiving": "Pasasalamat",
-  "thanksgivingDesc": "Nagpapasalamat para sa lahat ng bagay, para sa lahat ng tao, mga sitwasyon at mga bagay sa iyong buhay at nagpupuri sa Kanya &#8211; Efe 5:20; 1Tes 5:18",
-  "petition": "Kahilingan",
-  "petitionDesc": "Humihiling sa Panginoon para sa mga pangangailangan, paglago at mga tao na nangangailangan ng kaligtasan &#8211; 1Tim 2:1; Efe 6:18; Mat 7:7; Awit 143:8",
-  "endMessage": "Wakas"
+  "activityTitle": "{activity, select, calling{Tumatawag sa Pangalan ng Panginoon} praying{Nananalangin} prayReading{Pagbabasa-dalangin} confession{Nagpapahayag ng mga Kasalanan} consecration{Pag-aalay} thanksgiving{Pasasalamat} petition{Kahilingan} end{Wakas} other{they}}",
+  "@activityTitle": {
+    "description": "activity title",
+    "placeholders": {
+      "activity": {
+        "type": "String"
+      }
+    }
+  },
+  "activityDescription": "{activity, select, calling{Tumatawag sa Pangalan ng Panginoon upang ilagak ang ating isip sa espiritu - 1Cor 12:3; Roma 8:6; 10:12-13} praying{Binubuksan ang ating puso, pinalalambot ang ating puso at binabasyo ang ating sarili.  Sinasabi sa Kanya na iniibig natin Siya - 2Cor 3:16; Awit 62:8} prayReading{Ginagamit ang ating naensayong espiritu upang manalangin hinggil sa isa o dalawang bersikulo. Ginagawang personal na panalangin ang mga bersikulo - Efe 6:17-18; 2Tm. 3:16} confession{Ipinapahayag ang mga kasalanan at mga pagsalangsang sa ating budhi at inaalis ang lahat ng hadlang sa salamuha. Humihingi ng kapatawaran at paglilinis - 1Juan 1:7, 9; Awit 66:18; Isa 59:1-2} consecration{Muling inihahandog ang ating sarili sa Panginoon, ibinibigay sa Kanya ang buong puwang sa loob natin - Roma 12:1-2; 6:13,19; Marcos 12:30} thanksgiving{Nagpapasalamat para sa lahat ng bagay, para sa lahat ng tao, mga sitwasyon at mga bagay sa iyong buhay at nagpupuri sa Kanya - Efe 5:20; 1Tes 5:18} petition{Humihiling sa Panginoon para sa mga pangangailangan, paglago at mga tao na nangangailangan ng kaligtasan - 1Tim 2:1; Efe 6:18; Mat 7:7; Awit 143:8} end{Wakas} other{they}}",
+  "@activityDescription": {
+    "description": "activity title",
+    "placeholders": {
+      "activity": {
+        "type": "String"
+      }
+    }
+  }
 }

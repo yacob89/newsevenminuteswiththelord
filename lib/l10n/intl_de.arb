@@ -3,19 +3,22 @@
   "appName": "7 Minutes With The Lord",
   "configuration": "Config",
   "exit": "Exit",
-  "calling": "Den Namen des Herrn anrufen",
-  "callingDesc": "Den Namen des Herrn anrufen um unser Verstand auf den Geist zu setzen &#8211; 1.Kor 12:3; Röm. 8:6; 10:12&#8211;13",
-  "praying": "Beten",
-  "prayingDesc": "Unser Herz öffnen, es weichmachen und unser sein entleeren. Sag Ihm dass, wir Ihn lieben. &#8211; 2. Kor 3:16; Ps. 62:8",
-  "prayReading": "Betenlesen",
-  "prayReadingDesc": "Benutz unseren geübten Geist um über einen Vers oder zwei Verse zu beten. Wende diese Verse ins persönliche Gebet an. &#8211; Eph. 6:17&#8211;18; 2.Tim 3:16",
-  "confession": "Sünden bekennen",
-  "confessionDesc": "Die Sünden und Verstöße in unser Gewissen bekennen um alle Hindernisse zu einer Gemeinschaft zu beseitigen. Bitten um eine Vergebung und Reinigung. &#8211; 1.Joh 1:7, 9; Ps. 66:18; Jes. 59:1&#8211;2",
-  "consecration": "Sich hingeben",
-  "consecrationDesc": "Sich dem Herrn erneut hingeben, Ihm den ganzen Boden in unser Sein hingeben. &#8211; Röm. 12:1&#8211;2; 6:13,19; Mk. 12:30",
-  "thanksgiving": "Danksagung",
-  "thanksgivingDesc": "Sag Dank im allen Dingen; für alle Personen, Situationen und Dingen in deinem Leben und loben Ihn. &#8211; Eph. 5:20; 1.Thes 5:18",
-  "petition": "Fürbitte",
-  "petitionDesc": "Bittet dem Herrn um deine Bedürfnisse, deinen Wachstum und um Personen, die eine Errettung brauchen. &#8211; 1.Tim. 2:1: Eph. 6:18; Mt. 7:7; Ps. 143:8",
-  "endMessage": "End"
+  "activityTitle": "{activity, select, calling{Den Namen des Herrn anrufen} praying{Beten} prayReading{Betenlesen} confession{Sünden bekennen} consecration{Sich hingeben} thanksgiving{Danksagung} petition{Fürbitte} end{End} other{they}}",
+  "@activityTitle": {
+    "description": "activity title",
+    "placeholders": {
+      "activity": {
+        "type": "String"
+      }
+    }
+  },
+  "activityDescription": "{activity, select, calling{Den Namen des Herrn anrufen um unser Verstand auf den Geist zu setzen - 1.Kor 12:3; Röm. 8:6; 10:12-13} praying{Unser Herz öffnen, es weichmachen und unser sein entleeren. Sag Ihm dass, wir Ihn lieben. - 2. Kor 3:16; Ps. 62:8} prayReading{Benutz unseren geübten Geist um über einen Vers oder zwei Verse zu beten. Wende diese Verse ins persönliche Gebet an. - Eph. 6:17-18; 2.Tim 3:16} confession{Die Sünden und Verstöße in unser Gewissen bekennen um alle Hindernisse zu einer Gemeinschaft zu beseitigen. Bitten um eine Vergebung und Reinigung. - 1.Joh 1:7, 9; Ps. 66:18; Jes. 59:1-2} consecration{Sich dem Herrn erneut hingeben, Ihm den ganzen Boden in unser Sein hingeben. - Röm. 12:1-2; 6:13,19; Mk. 12:30} thanksgiving{Sag Dank im allen Dingen; für alle Personen, Situationen und Dingen in deinem Leben und loben Ihn. - Eph. 5:20; 1.Thes 5:18} petition{Bittet dem Herrn um deine Bedürfnisse, deinen Wachstum und um Personen, die eine Errettung brauchen. - 1.Tim. 2:1: Eph. 6:18; Mt. 7:7; Ps. 143:8} end{End} other{they}}",
+  "@activityDescription": {
+    "description": "activity title",
+    "placeholders": {
+      "activity": {
+        "type": "String"
+      }
+    }
+  }
 }

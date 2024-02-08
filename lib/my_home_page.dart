@@ -15,10 +15,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final Map<String, String> _languages = {
     'en': 'English',
-    'id': 'Indonesia',
-    'fr': 'French',
-    'de': 'German',
-    'zh': 'Chinese',
+    'ar': 'عربي',
+    'zt': '中文(繁體)',
+    'zh': '中文(简体)',
+    'de': 'Deutsch',
+    'id': 'Bahasa Indonesia',
+    'ko': '한국어',
+    'pt': 'Portuguese',
+    'es': 'Español',
+    'ru': 'русский язык',
+    'uk': 'українська мова',
+    'tl': 'Tagalog',
   }; // Map of language codes to language names
 
   void _changeLanguage(String langCode) {

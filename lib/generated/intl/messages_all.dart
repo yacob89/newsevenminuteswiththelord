@@ -16,21 +16,61 @@ import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
 import 'package:intl/src/intl_helpers.dart';
 
+import 'messages_ar.dart' as messages_ar;
+import 'messages_de.dart' as messages_de;
 import 'messages_en.dart' as messages_en;
+import 'messages_es.dart' as messages_es;
 import 'messages_id.dart' as messages_id;
+import 'messages_ko.dart' as messages_ko;
+import 'messages_pt.dart' as messages_pt;
+import 'messages_ru.dart' as messages_ru;
+import 'messages_tl.dart' as messages_tl;
+import 'messages_uk.dart' as messages_uk;
+import 'messages_zh.dart' as messages_zh;
+import 'messages_zt.dart' as messages_zt;
 
 typedef Future<dynamic> LibraryLoader();
 Map<String, LibraryLoader> _deferredLibraries = {
+  'ar': () => new SynchronousFuture(null),
+  'de': () => new SynchronousFuture(null),
   'en': () => new SynchronousFuture(null),
+  'es': () => new SynchronousFuture(null),
   'id': () => new SynchronousFuture(null),
+  'ko': () => new SynchronousFuture(null),
+  'pt': () => new SynchronousFuture(null),
+  'ru': () => new SynchronousFuture(null),
+  'tl': () => new SynchronousFuture(null),
+  'uk': () => new SynchronousFuture(null),
+  'zh': () => new SynchronousFuture(null),
+  'zt': () => new SynchronousFuture(null),
 };
 
 MessageLookupByLibrary? _findExact(String localeName) {
   switch (localeName) {
+    case 'ar':
+      return messages_ar.messages;
+    case 'de':
+      return messages_de.messages;
     case 'en':
       return messages_en.messages;
+    case 'es':
+      return messages_es.messages;
     case 'id':
       return messages_id.messages;
+    case 'ko':
+      return messages_ko.messages;
+    case 'pt':
+      return messages_pt.messages;
+    case 'ru':
+      return messages_ru.messages;
+    case 'tl':
+      return messages_tl.messages;
+    case 'uk':
+      return messages_uk.messages;
+    case 'zh':
+      return messages_zh.messages;
+    case 'zt':
+      return messages_zt.messages;
     default:
       return null;
   }

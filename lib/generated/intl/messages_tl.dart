@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a tl locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,36 +18,36 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'tl';
 
   static String m0(activity) => "${Intl.select(activity, {
             'calling':
-                'Calling on the Name of the Lord to set our mind on the spirit - 1 Cor.12:3; Rom. 8:6; 10:12-13',
+                'Tumatawag sa Pangalan ng Panginoon upang ilagak ang ating isip sa espiritu - 1Cor 12:3; Roma 8:6; 10:12-13',
             'praying':
-                'Opening our heart, softening our heart and emptying ourselves. Telling Him that we love Him - 2 Cor. 3:16; Psa. 62:8',
+                'Binubuksan ang ating puso, pinalalambot ang ating puso at binabasyo ang ating sarili.  Sinasabi sa Kanya na iniibig natin Siya - 2Cor 3:16; Awit 62:8',
             'prayReading':
-                'Using our exercised spirit to pray over a verse or two. Turning the verses into a personal prayer - Eph. 6:17-18; 2 Tim. 3:16',
+                'Ginagamit ang ating naensayong espiritu upang manalangin hinggil sa isa o dalawang bersikulo. Ginagawang personal na panalangin ang mga bersikulo - Efe 6:17-18; 2Tm. 3:16',
             'confession':
-                'Confessing the sins and offenses on our conscience and removing all blockages to fellowship. Asking for forgiveness and cleansing - 1 John 1:7, 9; Psa. 66:18; Isa. 59:1-2',
+                'Ipinapahayag ang mga kasalanan at mga pagsalangsang sa ating budhi at inaalis ang lahat ng hadlang sa salamuha. Humihingi ng kapatawaran at paglilinis - 1Juan 1:7, 9; Awit 66:18; Isa 59:1-2',
             'consecration':
-                'Presenting ourselves to the Lord afresh, giving Him the full ground in us - Rom. 12:1-2; 6:13,19; Mark 12:30',
+                'Muling inihahandog ang ating sarili sa Panginoon, ibinibigay sa Kanya ang buong puwang sa loob natin - Roma 12:1-2; 6:13,19; Marcos 12:30',
             'thanksgiving':
-                'Giving thanks for all things; for all the persons, situations and things in your life and praising Him - Eph. 5:20; 1 Thes. 5:18',
+                'Nagpapasalamat para sa lahat ng bagay, para sa lahat ng tao, mga sitwasyon at mga bagay sa iyong buhay at nagpupuri sa Kanya - Efe 5:20; 1Tes 5:18',
             'petition':
-                'Asking the Lord for needs, growth and persons that need salvation - 1 Tim. 2:1: Eph. 6:18; Matt. 7:7; Psa. 143:8',
-            'end': 'Continue to contact The Lord from time to time',
+                'Humihiling sa Panginoon para sa mga pangangailangan, paglago at mga tao na nangangailangan ng kaligtasan - 1Tim 2:1; Efe 6:18; Mat 7:7; Awit 143:8',
+            'end': 'Wakas',
             'other': 'they',
           })}";
 
   static String m1(activity) => "${Intl.select(activity, {
-            'calling': 'Calling on the Name of the Lord',
-            'praying': 'Praying',
-            'prayReading': 'Pray Reading',
-            'confession': 'Confession',
-            'consecration': 'Consecration',
-            'thanksgiving': 'Thanksgiving',
-            'petition': 'Petition',
-            'end': 'Continue to contact The Lord from time to time',
+            'calling': 'Tumatawag sa Pangalan ng Panginoon',
+            'praying': 'Nananalangin',
+            'prayReading': 'Pagbabasa-dalangin',
+            'confession': 'Nagpapahayag ng mga Kasalanan',
+            'consecration': 'Pag-aalay',
+            'thanksgiving': 'Pasasalamat',
+            'petition': 'Kahilingan',
+            'end': 'Wakas',
             'other': 'they',
           })}";
 

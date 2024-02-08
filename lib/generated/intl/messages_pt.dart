@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a pt locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,36 +18,36 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'pt';
 
   static String m0(activity) => "${Intl.select(activity, {
             'calling':
-                'Calling on the Name of the Lord to set our mind on the spirit - 1 Cor.12:3; Rom. 8:6; 10:12-13',
+                'Invocar o nome do Senhor para nos ajudar a colocar nossa mente no espírito - 1Co 12:3; Rm 8:6; 10:12-13',
             'praying':
-                'Opening our heart, softening our heart and emptying ourselves. Telling Him that we love Him - 2 Cor. 3:16; Psa. 62:8',
+                'Abrir o nosso coração, amolecê-lo e esvaziar-nos. Dizer-Lhe que O amamos - 2Co 3:16; Sl 62:8',
             'prayReading':
-                'Using our exercised spirit to pray over a verse or two. Turning the verses into a personal prayer - Eph. 6:17-18; 2 Tim. 3:16',
+                'Usar nosso espírito exercitado para orar sobre um ou dois versículos. Transformar os versículos em uma oração pessoal - Ef 6:17-18; 2Tm. 3:16',
             'confession':
-                'Confessing the sins and offenses on our conscience and removing all blockages to fellowship. Asking for forgiveness and cleansing - 1 John 1:7, 9; Psa. 66:18; Isa. 59:1-2',
+                'Confessar os pecados e ofensas em nossa consciência e remover todas as barreiras à comunhão. Pedir perdão e purificação - 1Jo 1:7, 9; Sl 66:18; Is 59:1-2',
             'consecration':
-                'Presenting ourselves to the Lord afresh, giving Him the full ground in us - Rom. 12:1-2; 6:13,19; Mark 12:30',
+                'Apresentar-nos ao Senhor de modo fresco, dando-Lhe todo o terreno em nós - Rm 12:1-2; 6:13,19; Mc 12:30',
             'thanksgiving':
-                'Giving thanks for all things; for all the persons, situations and things in your life and praising Him - Eph. 5:20; 1 Thes. 5:18',
+                'Dar graças por todas as coisas; por todas as pessoas, situações e coisas em sua vida e louvá-Lo - Ef 5:20; 1Ts 5:18',
             'petition':
-                'Asking the Lord for needs, growth and persons that need salvation - 1 Tim. 2:1: Eph. 6:18; Matt. 7:7; Psa. 143:8',
-            'end': 'Continue to contact The Lord from time to time',
+                'Pedir ao Senhor por necessidades, crescimento e por pessoas que precisam de salvação - 1Tm 2:1; Ef 6:18; Mt 7:7; Sl 143:8',
+            'end': 'Fim',
             'other': 'they',
           })}";
 
   static String m1(activity) => "${Intl.select(activity, {
-            'calling': 'Calling on the Name of the Lord',
-            'praying': 'Praying',
-            'prayReading': 'Pray Reading',
-            'confession': 'Confession',
-            'consecration': 'Consecration',
-            'thanksgiving': 'Thanksgiving',
-            'petition': 'Petition',
-            'end': 'Continue to contact The Lord from time to time',
+            'calling': 'Invocar o nome do Senhor',
+            'praying': 'Orar',
+            'prayReading': 'Orar-ler',
+            'confession': 'Confessar',
+            'consecration': 'Consagrar',
+            'thanksgiving': 'Agradecer',
+            'petition': 'Pedir',
+            'end': 'Fim',
             'other': 'they',
           })}";
 

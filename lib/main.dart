@@ -6,6 +6,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart'; // Import generated localization class
 
+BuildContext? buildContext;
+
 final ThemeData customTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
   useMaterial3: true,
@@ -95,6 +97,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    buildContext = context;
     return MaterialApp(
       title: 'Seven Minutes With The Lord',
       theme: customTheme,

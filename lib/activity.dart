@@ -3,6 +3,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'dart:async';
 import "logic.dart";
 import "main.dart";
+import 'generated/l10n.dart'; // Import generated localization class
 
 class Activity extends StatefulWidget {
   const Activity({super.key});
@@ -231,9 +232,10 @@ class _ActivityState extends State<Activity> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = S.of(context);
     return Scaffold(
         appBar: AppBar(
-          title: Text(activityTitle),
+          title: Text(localizations.activityTitle(activityTitle)),
           backgroundColor: Theme.of(context).colorScheme.primary,
         ),
         body: Center(
@@ -244,7 +246,7 @@ class _ActivityState extends State<Activity> {
                   margin: const EdgeInsets.all(40.0),
                   alignment: Alignment.center,
                   child: Text(
-                    activityDescription,
+                    localizations.activityDescription(activityTitle),
                     textAlign: TextAlign.center,
                   )),
               Text(

@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ko locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,36 +18,36 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ko';
 
   static String m0(activity) => "${Intl.select(activity, {
             'calling':
-                'Calling on the Name of the Lord to set our mind on the spirit - 1 Cor.12:3; Rom. 8:6; 10:12-13',
+                '주의 이름을 불러 생각을 영으로 돌이킴&#8211; 고전12:3; 롬 8:6; 10:12&#8211;13',
             'praying':
-                'Opening our heart, softening our heart and emptying ourselves. Telling Him that we love Him - 2 Cor. 3:16; Psa. 62:8',
+                '마음을 열고 부드럽게하여 자신을 비우고 주님을 사랑한다고 말함 &#8211; 고후 3:16; 시62:8',
             'prayReading':
-                'Using our exercised spirit to pray over a verse or two. Turning the verses into a personal prayer - Eph. 6:17-18; 2 Tim. 3:16',
+                '훈련된 영을 사용하여 기도로 한  두 구절을 취하고 개인적인 기도로 적용 &#8211; 엡 6:17&#8211;18; 딤후 3:16',
             'confession':
-                'Confessing the sins and offenses on our conscience and removing all blockages to fellowship. Asking for forgiveness and cleansing - 1 John 1:7, 9; Psa. 66:18; Isa. 59:1-2',
+                '양심에서 죄들과 잘못을 자백하고 교통을 위해 모든 방해물을 제거하고 죄사함과 정결케함을 구함 &#8211; 요일 1:7, 9; 시 66:18; 사 59:1&#8211;2',
             'consecration':
-                'Presenting ourselves to the Lord afresh, giving Him the full ground in us - Rom. 12:1-2; 6:13,19; Mark 12:30',
+                '우리를 점유하시도록 우리 자신을 주님께 다시 드림 &#8211; 롬 12:1&#8211;2; 6:13,19; 막 12:30',
             'thanksgiving':
-                'Giving thanks for all things; for all the persons, situations and things in your life and praising Him - Eph. 5:20; 1 Thes. 5:18',
+                '모든 것, 모든 사람, 환경, 우리 생활의 모든 것에 감사와 찬양을 드리고 &#8211; 엡 5:20; 살전 5:18',
             'petition':
-                'Asking the Lord for needs, growth and persons that need salvation - 1 Tim. 2:1: Eph. 6:18; Matt. 7:7; Psa. 143:8',
-            'end': 'Continue to contact The Lord from time to time',
+                '주님께 필요, 성장 그리고 구원이 필요한  사람을 구함 &#8211; 1 팀. 2:1: 엡 6:18; 마 7:7; 시 143:8',
+            'end': '끝',
             'other': 'they',
           })}";
 
   static String m1(activity) => "${Intl.select(activity, {
-            'calling': 'Calling on the Name of the Lord',
-            'praying': 'Praying',
-            'prayReading': 'Pray Reading',
-            'confession': 'Confession',
-            'consecration': 'Consecration',
-            'thanksgiving': 'Thanksgiving',
-            'petition': 'Petition',
-            'end': 'Continue to contact The Lord from time to time',
+            'calling': '주님의 이름 부르기',
+            'praying': '기도',
+            'prayReading': '기도로 말씀 읽기',
+            'confession': '자백',
+            'consecration': '헌신',
+            'thanksgiving': '감사',
+            'petition': '간구',
+            'end': '끝',
             'other': 'they',
           })}";
 

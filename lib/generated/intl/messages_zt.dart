@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a zt locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,36 +18,32 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'zt';
 
   static String m0(activity) => "${Intl.select(activity, {
-            'calling':
-                'Calling on the Name of the Lord to set our mind on the spirit - 1 Cor.12:3; Rom. 8:6; 10:12-13',
-            'praying':
-                'Opening our heart, softening our heart and emptying ourselves. Telling Him that we love Him - 2 Cor. 3:16; Psa. 62:8',
-            'prayReading':
-                'Using our exercised spirit to pray over a verse or two. Turning the verses into a personal prayer - Eph. 6:17-18; 2 Tim. 3:16',
+            'calling': '藉着呼求主名，將心思置於靈 - 林前十二:3; 羅八:6; 十:12-13',
+            'praying': '敞開我們的心，輭化我們的心並倒空自己，告訴祂: 主阿！我愛你 -林後三:16; 詩六十二:8',
+            'prayReading': '用我們操練過的靈禱讀一至二節, 把所讀的經節化爲自己個人的禱告 - 弗六:17-18; 提後三:16',
             'confession':
-                'Confessing the sins and offenses on our conscience and removing all blockages to fellowship. Asking for forgiveness and cleansing - 1 John 1:7, 9; Psa. 66:18; Isa. 59:1-2',
+                '憑着良心承認自己的罪與過犯，除去一切與主交通的攔阻，求主赦免並潔凈 - 約壹一:7, 9; 詩六十六18；賽五十九1-2',
             'consecration':
-                'Presenting ourselves to the Lord afresh, giving Him the full ground in us - Rom. 12:1-2; 6:13,19; Mark 12:30',
-            'thanksgiving':
-                'Giving thanks for all things; for all the persons, situations and things in your life and praising Him - Eph. 5:20; 1 Thes. 5:18',
+                '更新自己的奉獻，並使祂在我們裏面得着完全的地位 - 羅十二:1-2; 六:13,19; 可十二:30',
+            'thanksgiving': '爲着你在曰常生活中的一切人，事，物，感謝祂並讚美祂 - 弗五:20; 帖前五:18',
             'petition':
-                'Asking the Lord for needs, growth and persons that need salvation - 1 Tim. 2:1: Eph. 6:18; Matt. 7:7; Psa. 143:8',
-            'end': 'Continue to contact The Lord from time to time',
+                '爲着自己的需要，生命的長大，以及别人的得救，向主祈求 - 提前二:1: 弗六:18; 太七:7; 詩一百四十三:8',
+            'end': '結束',
             'other': 'they',
           })}";
 
   static String m1(activity) => "${Intl.select(activity, {
-            'calling': 'Calling on the Name of the Lord',
-            'praying': 'Praying',
-            'prayReading': 'Pray Reading',
-            'confession': 'Confession',
-            'consecration': 'Consecration',
-            'thanksgiving': 'Thanksgiving',
-            'petition': 'Petition',
-            'end': 'Continue to contact The Lord from time to time',
+            'calling': '呼求主名',
+            'praying': '禱告',
+            'prayReading': '禱讀',
+            'confession': '認罪',
+            'consecration': '奉獻',
+            'thanksgiving': '感謝',
+            'petition': '祈求',
+            'end': '結束',
             'other': 'they',
           })}";
 
