@@ -6,6 +6,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart'; // Import generated localization class
 import "overlay.dart";
+import "change_notifier.dart";
+import 'package:provider/provider.dart';
 
 BuildContext? buildContext;
 
@@ -125,17 +127,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     buildContext = context;
-    return MaterialApp(
-      title: 'Seven Minutes With The Lord',
-      theme: customTheme,
-      home: const MyHomePage(title: 'Seven Minutes With The Lord'),
-      localizationsDelegates: const [
-        S.delegate, // Add the generated delegate
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
+    return ChangeNotifierProvider(
+      create: (context) => LocaleProvider(),
+      child: Consumer<LocaleProvider>(
+        builder: (context, localeProvider, child) {
+          return MaterialApp(
+            title: 'Seven Minutes With The Lord',
+            theme: customTheme,
+            home: const MyHomePage(title: 'Seven Minutes With The Lord'),
+            locale: localeProvider.locale,
+            localizationsDelegates: const [
+              S.delegate, // Add the generated delegate
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+          );
+        },
+      ),
     );
   }
 }

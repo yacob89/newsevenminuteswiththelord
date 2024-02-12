@@ -56,7 +56,7 @@ class _ActivityState extends State<Activity> {
   }
 
   void _startTimer() {
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) async {
       FlutterOverlayWindow.shareData("$_secondsRemaining^$activityTitle");
       if (_secondsRemaining <= 0) {
         audioPlayer
@@ -68,7 +68,7 @@ class _ActivityState extends State<Activity> {
           activityTitle = prayingName;
           activityName = ActivityStep.praying;
           activityDescription = prayingDescription;
-          showNotification(activityTitle, "$defaultPrayingTime second");
+          // showNotification(activityTitle, "$defaultPrayingTime second");
         });
         return;
       }
@@ -78,7 +78,7 @@ class _ActivityState extends State<Activity> {
           activityTitle = prayReadingName;
           activityName = ActivityStep.prayreading;
           activityDescription = prayReadingDescription;
-          showNotification(activityTitle, "$defaultPrayingTime second");
+          // showNotification(activityTitle, "$defaultPrayingTime second");
         });
         return;
       }
@@ -88,7 +88,7 @@ class _ActivityState extends State<Activity> {
           activityTitle = confessionName;
           activityName = ActivityStep.confession;
           activityDescription = confessionDescription;
-          showNotification(activityTitle, "$defaultPrayingTime second");
+          // showNotification(activityTitle, "$defaultPrayingTime second");
         });
         return;
       }
@@ -98,7 +98,7 @@ class _ActivityState extends State<Activity> {
           activityTitle = consecrationName;
           activityName = ActivityStep.consecration;
           activityDescription = consecrationDescription;
-          showNotification(activityTitle, "$defaultPrayingTime second");
+          // showNotification(activityTitle, "$defaultPrayingTime second");
         });
         return;
       }
@@ -118,7 +118,7 @@ class _ActivityState extends State<Activity> {
           activityTitle = petitionName;
           activityName = ActivityStep.petition;
           activityDescription = petitionDescription;
-          showNotification(activityTitle, "$defaultPrayingTime second");
+          // showNotification(activityTitle, "$defaultPrayingTime second");
         });
         return;
       }
@@ -128,12 +128,13 @@ class _ActivityState extends State<Activity> {
           activityTitle = endingName;
           activityName = ActivityStep.ending;
           activityDescription = endingDescription;
-          showNotification(activityTitle, "$defaultPrayingTime second");
+          // showNotification(activityTitle, "$defaultPrayingTime second");
         });
         return;
       }
       if (_secondsRemaining <= 0 && activityName == ActivityStep.ending) {
         _timer?.cancel();
+        await FlutterOverlayWindow.closeOverlay();
         return;
       }
       if (!timerPaused) {

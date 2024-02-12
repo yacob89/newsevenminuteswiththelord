@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'activity.dart';
 import 'generated/l10n.dart'; // Import generated files
 import 'package:shared_preferences/shared_preferences.dart';
+import "change_notifier.dart";
+import 'package:provider/provider.dart';
 // import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -39,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _changeLanguage(String langCode) {
     Locale newLocale = Locale(langCode, '');
     S.load(newLocale); // Load the new locale
+    Provider.of<LocaleProvider>(context, listen: false).setLocale(newLocale);
     setState(() {
       _selectedLanguageCode = langCode;
     });
