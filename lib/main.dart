@@ -71,16 +71,16 @@ void initializeNotifications() async {
 }
 
 Future<void> requestNotificationPermission() async {
-  var notificationPermission = await Permission.notification.status;
+  // var notificationPermission = await Permission.notification.status;
   var systemAlertPermission = await Permission.systemAlertWindow.status;
-  if (notificationPermission.isDenied) {
-    // We didn't ask for permission yet or the permission has been denied before but not permanently.
-    Map<Permission, PermissionStatus> statuses = await [
-      Permission.notification,
-    ].request();
-    print(statuses[
-        Permission.notification]); // It should print PermissionStatus.granted
-  }
+  // if (notificationPermission.isDenied) {
+  //   // We didn't ask for permission yet or the permission has been denied before but not permanently.
+  //   Map<Permission, PermissionStatus> statuses = await [
+  //     Permission.notification,
+  //   ].request();
+  //   print(statuses[
+  //       Permission.notification]); // It should print PermissionStatus.granted
+  // }
   if (systemAlertPermission.isDenied) {
     // We didn't ask for permission yet or the permission has been denied before but not permanently.
     Map<Permission, PermissionStatus> statuses = await [
@@ -90,12 +90,12 @@ Future<void> requestNotificationPermission() async {
         Permission.notification]); // It should print PermissionStatus.granted
   }
 
-  if (notificationPermission.isPermanentlyDenied) {
-    // The user opted to never again see the permission request dialog for this
-    // app. The only way to change the permission's status now is to let the
-    // user manually enable it in the system settings.
-    openAppSettings();
-  }
+  // if (notificationPermission.isPermanentlyDenied) {
+  //   // The user opted to never again see the permission request dialog for this
+  //   // app. The only way to change the permission's status now is to let the
+  //   // user manually enable it in the system settings.
+  //   openAppSettings();
+  // }
 }
 
 Future<void> showNotification(
