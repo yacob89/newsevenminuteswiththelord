@@ -47,7 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
             'consecration': 'Consecration',
             'thanksgiving': 'Thanksgiving',
             'petition': 'Petition',
-            'end': 'Continue to contact The Lord from time to time',
+            'end': 'End',
             'other': 'they',
           })}";
 

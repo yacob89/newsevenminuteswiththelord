@@ -90,7 +90,7 @@ class S {
     );
   }
 
-  /// `{activity, select, calling{Calling on the Name of the Lord} praying{Praying} prayReading{Pray Reading} confession{Confession} consecration{Consecration} thanksgiving{Thanksgiving} petition{Petition} end{Continue to contact The Lord from time to time} other{they}}`
+  /// `{activity, select, calling{Calling on the Name of the Lord} praying{Praying} prayReading{Pray Reading} confession{Confession} consecration{Consecration} thanksgiving{Thanksgiving} petition{Petition} end{End} other{they}}`
   String activityTitle(String activity) {
     return Intl.select(
       activity,
@@ -102,7 +102,7 @@ class S {
         'consecration': 'Consecration',
         'thanksgiving': 'Thanksgiving',
         'petition': 'Petition',
-        'end': 'Continue to contact The Lord from time to time',
+        'end': 'End',
         'other': 'they',
       },
       name: 'activityTitle',

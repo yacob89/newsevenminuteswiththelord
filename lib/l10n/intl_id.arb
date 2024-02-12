@@ -3,7 +3,7 @@
   "appName": "7 Menit Bersama Tuhan",
   "configuration": "Pengaturan",
   "exit": "Keluar",
-  "activityTitle": "{activity, select, calling{Berseru kepada nama Tuhan} praying{Berdoa} prayReading{Doa Baca} confession{Mengaku Dosa} consecration{Konsikrasi} thanksgiving{Mengucap Syukur} petition{Doa Permohonan} end{Lanjutkan untuk mengontak Tuhan dari waktu ke waktu} other{they}}",
+  "activityTitle": "{activity, select, calling{Berseru kepada nama Tuhan} praying{Berdoa} prayReading{Doa Baca} confession{Mengaku Dosa} consecration{Konsikrasi} thanksgiving{Mengucap Syukur} petition{Doa Permohonan} end{Selesai} other{they}}",
   "@activityTitle": {
     "description": "activity title",
     "placeholders": {

@@ -14,7 +14,7 @@ final ThemeData customTheme = ThemeData(
   useMaterial3: true,
   textTheme: TextTheme(
     displayLarge: const TextStyle(
-      fontSize: 72,
+      fontSize: 60,
       fontWeight: FontWeight.bold,
     ),
     // TRY THIS: Change one of the GoogleFonts
@@ -23,6 +23,7 @@ final ThemeData customTheme = ThemeData(
     //           and the middle text uses "bodyMedium".
     bodyLarge: GoogleFonts.roboto(fontSize: 30, color: Colors.deepPurple),
     bodyMedium: GoogleFonts.roboto(fontSize: 14),
+    bodySmall: GoogleFonts.roboto(fontSize: 10),
     displaySmall: GoogleFonts.roboto(),
   ),
 );
@@ -39,8 +40,17 @@ void main() {
 // overlay entry point
 @pragma("vm:entry-point")
 void overlayMain() {
-  runApp(const MaterialApp(
-      debugShowCheckedModeBanner: false, home: TextFieldOverlay()));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: const TextFieldOverlay(),
+    localizationsDelegates: const [
+      S.delegate, // Add the generated delegate
+      GlobalMaterialLocalizations.delegate,
+      GlobalWidgetsLocalizations.delegate,
+      GlobalCupertinoLocalizations.delegate,
+    ],
+    supportedLocales: S.delegate.supportedLocales,
+  ));
 }
 
 void initializeNotifications() async {
@@ -59,8 +69,9 @@ void initializeNotifications() async {
 }
 
 Future<void> requestNotificationPermission() async {
-  var status = await Permission.notification.status;
-  if (status.isDenied) {
+  var notificationPermission = await Permission.notification.status;
+  var systemAlertPermission = await Permission.systemAlertWindow.status;
+  if (notificationPermission.isDenied) {
     // We didn't ask for permission yet or the permission has been denied before but not permanently.
     Map<Permission, PermissionStatus> statuses = await [
       Permission.notification,
@@ -68,8 +79,16 @@ Future<void> requestNotificationPermission() async {
     print(statuses[
         Permission.notification]); // It should print PermissionStatus.granted
   }
+  if (systemAlertPermission.isDenied) {
+    // We didn't ask for permission yet or the permission has been denied before but not permanently.
+    Map<Permission, PermissionStatus> statuses = await [
+      Permission.systemAlertWindow,
+    ].request();
+    print(statuses[
+        Permission.notification]); // It should print PermissionStatus.granted
+  }
 
-  if (status.isPermanentlyDenied) {
+  if (notificationPermission.isPermanentlyDenied) {
     // The user opted to never again see the permission request dialog for this
     // app. The only way to change the permission's status now is to let the
     // user manually enable it in the system settings.

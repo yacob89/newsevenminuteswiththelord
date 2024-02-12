@@ -3,7 +3,7 @@
   "appName": "7 Minutes With The Lord",
   "configuration": "Config",
   "exit": "Exit",
-  "activityTitle": "{activity, select, calling{Calling on the Name of the Lord} praying{Praying} prayReading{Pray Reading} confession{Confession} consecration{Consecration} thanksgiving{Thanksgiving} petition{Petition} end{Continue to contact The Lord from time to time} other{they}}",
+  "activityTitle": "{activity, select, calling{Calling on the Name of the Lord} praying{Praying} prayReading{Pray Reading} confession{Confession} consecration{Consecration} thanksgiving{Thanksgiving} petition{Petition} end{End} other{they}}",
   "@activityTitle": {
     "description": "activity title",
     "placeholders": {

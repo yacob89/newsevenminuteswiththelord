@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'activity.dart';
 import 'generated/l10n.dart'; // Import generated files
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_overlay_window/flutter_overlay_window.dart';
+// import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -61,22 +61,24 @@ class _MyHomePageState extends State<MyHomePage> {
     _changeLanguage(languageCode);
   }
 
-  void showAppOverlay() async {
-    final status = await FlutterOverlayWindow.isPermissionGranted();
-    if (status) {
-      if (await FlutterOverlayWindow.isActive()) return;
-      await FlutterOverlayWindow.showOverlay(
-        enableDrag: true,
-        overlayTitle: "X-SLAYER",
-        overlayContent: 'Overlay Enabled',
-        flag: OverlayFlag.defaultFlag,
-        visibility: NotificationVisibility.visibilityPublic,
-        positionGravity: PositionGravity.auto,
-        height: 500,
-        width: WindowSize.matchParent,
-      );
-    }
-  }
+  // void showAppOverlay() async {
+  //   // double screenWidth = MediaQuery.of(context).size.width;
+  //   // int overlayWidth = (screenWidth * 0.75).round();
+  //   final status = await FlutterOverlayWindow.isPermissionGranted();
+  //   if (status) {
+  //     if (await FlutterOverlayWindow.isActive()) return;
+  //     await FlutterOverlayWindow.showOverlay(
+  //       enableDrag: true,
+  //       overlayTitle: "X-SLAYER",
+  //       overlayContent: 'Overlay Enabled',
+  //       flag: OverlayFlag.defaultFlag,
+  //       visibility: NotificationVisibility.visibilityPublic,
+  //       positionGravity: PositionGravity.auto,
+  //       height: 500,
+  //       width: 800,
+  //     );
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    showAppOverlay();
+                    // showAppOverlay();
                     Navigator.push(
                       context,
                       MaterialPageRoute(

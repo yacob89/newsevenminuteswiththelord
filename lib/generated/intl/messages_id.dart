@@ -35,7 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 'Mengucap syukur untuk segala sesuatu; untuk semua orang, semua situasi, dan semua hal di dalam hidup Anda dan memuji Dia - Efesus 5:20; 1 Tesalonika 5:18',
             'petition':
                 'Memohon kepada Tuhan untuk semua kebutuhan kita, pertumbuhan kita, dan orang-orang yang memerlukan keselamatan - 1 Timotius 2:1: Efesus 6:18; Matius 7:7; Mazmur 143:8',
-            'other': 'they',
+            'other': 'Selesai',
           })}";
 
   static String m1(activity) => "${Intl.select(activity, {
@@ -46,8 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
             'consecration': 'Konsikrasi',
             'thanksgiving': 'Mengucap Syukur',
             'petition': 'Doa Permohonan',
-            'end': 'Lanjutkan untuk mengontak Tuhan dari waktu ke waktu',
-            'other': 'they',
+            'end': 'Selesai',
+            'other': 'Selesai',
           })}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);

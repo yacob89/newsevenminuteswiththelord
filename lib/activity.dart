@@ -27,6 +27,7 @@ class _ActivityState extends State<Activity> {
   void initState() {
     super.initState();
     _startTimer();
+    showAppOverlay();
   }
 
   @override
@@ -35,9 +36,28 @@ class _ActivityState extends State<Activity> {
     super.dispose();
   }
 
+  void showAppOverlay() async {
+    // double screenWidth = MediaQuery.of(context).size.width;
+    // int overlayWidth = (screenWidth * 0.75).round();
+    final status = await FlutterOverlayWindow.isPermissionGranted();
+    if (status) {
+      if (await FlutterOverlayWindow.isActive()) return;
+      await FlutterOverlayWindow.showOverlay(
+        enableDrag: true,
+        overlayTitle: "X-SLAYER",
+        overlayContent: 'Overlay Enabled',
+        flag: OverlayFlag.defaultFlag,
+        visibility: NotificationVisibility.visibilityPublic,
+        positionGravity: PositionGravity.auto,
+        height: 500,
+        width: 800,
+      );
+    }
+  }
+
   void _startTimer() {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      FlutterOverlayWindow.shareData("$_secondsRemaining^$activityName");
+      FlutterOverlayWindow.shareData("$_secondsRemaining^$activityTitle");
       if (_secondsRemaining <= 0) {
         audioPlayer
             .play(AssetSource('sounds/mixkit-alert-quick-chime-766.wav'));
