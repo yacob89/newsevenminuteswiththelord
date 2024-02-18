@@ -21,14 +21,14 @@ enum ActivityStep {
   ending
 }
 
-int defaultCallingTime = 5; //30;
-int defaultPrayingTime = 6; //60;
-int defaultPrayReadingTime = 6; //150;
-int defaultConfessionTime = 6; //60;
-int defaultConsecrationTime = 6; //30;
-int defaultThanksgivingTime = 6; //30;
-int defaultPetitionTime = 6; //60;
-int defaultEndingTime = 6; //60;
+int defaultCallingTime = 30; //30;
+int defaultPrayingTime = 60; //60;
+int defaultPrayReadingTime = 150; //150;
+int defaultConfessionTime = 60; //60;
+int defaultConsecrationTime = 30; //30;
+int defaultThanksgivingTime = 30; //30;
+int defaultPetitionTime = 60; //60;
+int defaultEndingTime = 60; //60;
 
 String callingName = "calling";
 String prayingName = "praying";
